@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int x;
+	int cnt = 0;
+	//scanf_s("%d", &x);
+
+	for (x = 2; cnt<50; x++) {//限制50个素数
+		int i;
+		int isPrime = 1;//x是素数
+		for (i = 2; i < x; i++) {
+			if (x % i == 0) {
+				isPrime = 0;
+				break;
+			}
+		}
+		if (isPrime) {
+			cnt++;
+			printf("%d\t", x);
+		}if (cnt % 5 == 0) {
+			printf("\n");
+		}
+	}
+	return 0;
+}
